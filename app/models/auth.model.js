@@ -30,7 +30,7 @@ var dataModels = {
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
-                callback({message : 'password insertado'})
+                callback({message : 'password creado satisfactoriamene'})
             })
         }
     },
