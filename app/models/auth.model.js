@@ -1,9 +1,9 @@
 const connection = require('../../config/connection')
 
 var dataModels = {
-    getRols: (callback) => {
+    getAuths: (callback) => {
         if(connection) {
-            let sql = `select * from role`
+            let sql = `select * from auth`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
@@ -11,10 +11,10 @@ var dataModels = {
             })
         }
     },
-    getOneRol: (data, callback) => {
+    getOneAuth: (data, callback) => {
         console.log("el id : ", data)
         if(connection) {
-            let sql = `select * from role where role_id = ${connection.escape(data)}`
+            let sql = `select * from auth where auth_id = ${connection.escape(data)}`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
@@ -23,36 +23,36 @@ var dataModels = {
         }
     },
 
-    addRol: (data, callback) => {
+    addAuth: (data, callback) => {
 
         if(connection) {
-            let sql = `insert into role(role_name) values (${connection.escape(data.role_name)})`
+            let sql = `insert into auth(auth_password) values (${connection.escape(data.auth_password)})`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
-                callback({message : 'rol creado satisfactoriamene'})
+                callback({message : 'password insertado'})
             })
         }
     },
 
-    editRol : (data, callback) => {
+    editAuth : (data, callback) => {
         if(connection) {
-            let sql = `update role set role_name = ${connection.escape(data.role_name)} where role_id = ${connection.escape(data.role_id)}`
+            let sql = `update auth set auth_password = ${connection.escape(data.auth_password)} where auth_id = ${connection.escape(data.auth_id)}`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
-                callback({message: 'rol actualizado'})
+                callback({message: 'password actualizado'})
             })
         }
     },
 
-    deleteRol : (data, callback) => {
+    deleteAuth : (data, callback) => {
         if(connection) {
-            let sql = `delete from role where role_id = ${connection.escape(data)}`
+            let sql = `delete from auth where auth_id = ${connection.escape(data)}`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
-                callback({message: 'rol eliminado'})
+                callback({message: 'password eliminado'})
             })
         }
     }

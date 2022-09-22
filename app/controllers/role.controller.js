@@ -10,15 +10,15 @@ function getRols(req, res){
 
 function getOneRol(req, res){
     console.log("id : ", req.params)
-    const { id } = req.params
-    dataModels.getOneRol(id, (data, error) => {
+    const { role_id } = req.params
+    dataModels.getOneRol(role_id, (data, error) => {
         res.json(data)
     })
 }
 
 function addRol(req, res){
     const {role_name} =  req.body
-    console.log(`carros : ${role_name}`)
+    console.log(`rol : ${role_name}`)
     dataModels.addRol({role_name}, (data, error) => {
         res.json(data)
     })
@@ -27,14 +27,14 @@ function addRol(req, res){
 function editRol(req, res) {
     const { role_id } = req.params
     const { role_name } = req.body
-    dataModels.editCar({role_id, role_name}, (data, error) => {
+    dataModels.editRol({role_id, role_name}, (data, error) => {
         res.json(data)
     })
 }
 
 function deleteRol(req, res){
     const { role_id } = req.params
-    dataModels.deleteCar(role_id, (data, error) => {
+    dataModels.deleteRol(role_id, (data, error) => {
         res.json(data)
     })
 }
