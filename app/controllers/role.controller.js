@@ -18,7 +18,7 @@ function getOneRol(req, res){
 
 function addRol(req, res){
     const {role_name} =  req.body
-    console.log(`carros : ${role_marca}`)
+    console.log(`carros : ${role_name}`)
     dataModels.addRol({role_name}, (data, error) => {
         res.json(data)
     })
