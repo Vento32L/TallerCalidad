@@ -1,4 +1,4 @@
-const dataModels = require('../models/cars.model')
+const dataModels = require('../models/role.model')
 const connection = require('../../config/connection')
 
 function getRols(req, res){
