@@ -1,4 +1,4 @@
-const connection = require('../../config/connection')
+/*const connection = require('../../config/connection')
 
 var dataModels = {
     getAccounts: (callback) => {
@@ -26,7 +26,11 @@ var dataModels = {
     addAccount: (data, callback) => {
 
         if(connection) {
-            let sql = `insert into account (account_maxQuality, account_row2, foreignCityId) values (${connection.escape(data.account_maxQuality)}), (${connection.escape(data.account_row2)}), (${connection.escape(data.foreignCityId)})`
+            let sql = `insert into account  
+                values 
+                (${connection.escape(data.account_maxQuality)}), 
+                (${connection.escape(data.account_row2)}), 
+                (${connection.escape(data.foreignCityId)})`
 
             connection.query(sql, (error, rows) => {
                 if(error) throw error
@@ -60,4 +64,4 @@ var dataModels = {
     
 }
 
-module.exports = dataModels
+module.exports = dataModels*/

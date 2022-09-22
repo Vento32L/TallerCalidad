@@ -1,4 +1,4 @@
-const dataModels = require('../models/account.model')
+/*const dataModels = require('../models/account.model')
 const connection = require('../../config/connection')
 
 function getAccounts(req, res){
@@ -48,4 +48,4 @@ module.exports={
     addAccount,
     editAccount,
     deleteAccount
-}
+}*/
