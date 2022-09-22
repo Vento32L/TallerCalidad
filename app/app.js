@@ -12,6 +12,6 @@ app.use(express.json())
 //routes
 app.use(require('./routes/role.route'))
 app.use(require('./routes/auth.route'))
-//app.use(require('./routes/account.route'))
+app.use(require('./routes/account.route'))
 
 module.exports = app
