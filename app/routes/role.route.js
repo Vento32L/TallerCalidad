@@ -7,7 +7,7 @@ route.route('/roles').get(getRols)
 route.route('/roles/:role_id').get(getOneRol)
 route.route('/roles').post(addRol)
 route.route('/roles/:role_id').put(editRol)
-route.route('/:id').delete(deleteRol)
+route.route('/:role_id').delete(deleteRol)
 
 
 module.exports = route
