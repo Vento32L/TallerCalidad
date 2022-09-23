@@ -24,11 +24,10 @@ var dataModels = {
     },
 
     addUser : (data, callback) => {
-        //INSERT INTO `user`(`user_id`, `user_name`, `user_lastname`, `user_email`, `user_phone`, `user_password`, `user_profileImage`, `role_role_id`, `auth_auth_id`)
         if(connection) {
             let sql = `insert into user(user_name, user_lastname, user_email, user_phone, user_password, user_profileImage, role_role_id, auth_auth_id) values (${connection.escape(data.user_name)}, 
             ${connection.escape(data.user_lastname)}, 
-            ${connection.escape(data.user_emaila)}, 
+            ${connection.escape(data.user_email)}, 
             ${connection.escape(data.user_phone)}, 
             ${connection.escape(data.user_password)}, 
             ${connection.escape(data.user_profileImage)}, 
