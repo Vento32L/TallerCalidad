@@ -14,9 +14,20 @@ function getOneUser(req, res){
     dataModels.getOneUser(user_id, (data, error) => {
         res.json(data)
     })
+
+}
+
+function addUser(req, res){
+    const {user_name,user_lastname, user_email, user_phone, user_password, user_profileImage, role_role_id, auth_auth_id} =  req.body
+    console.log(`usuario : ${user_name}, ${user_lastname}, ${user_email}, ${user_phone}, ${user_password}, ${user_profileImage }, ${role_role_id }, ${auth_auth_id } `)
+    dataModels.addUser({user_name,user_lastname,  user_email,user_phone,user_password,user_profileImage, role_role_id, auth_auth_id }, (data, error) => {
+        res.json(data)
+    })
 }
 
 module.exports={
     getUsers,
-    getOneUser
+    getOneUser,
+    addUser
+    
 }
