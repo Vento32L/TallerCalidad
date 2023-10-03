@@ -9,9 +9,10 @@ const mysql = require('mysql');
     }*/
     const myConn = mysql.createConnection({
         host: "localhost",
+        port: "3306",
         user: "root",
-        password: "76A*6uyrT%",
-        database: "interactivegame_nasayuwe"
+        password: " ",
+        database: "taller_calidad"
     })
 
     //const myConn = mysql.createConnection(objectConection)
